@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: transparent;
+    font-family: 'poppins',sans-serif;
+
+}
+body{
+    background: rgb(30,30,30);
+    color:white;
+    overflow: hidden;
+    overflow-y:scroll ;
+
+}
+
+/* body {
+    @apply bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300;
+    overflow: hidden;
+    overflow-y: scroll;
+} */
