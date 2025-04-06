@@ -4,6 +4,7 @@ import Skills from "./components/Skills/skills";
 import Works from "./components/Works/works";
 import Contact from "./components/Contact/contact";
 import Footer from "./components/Footer/footer";
+import Skill2 from "./components/skill2/skill2";
 function App() {
   return (
     <div className="App">
@@ -11,6 +12,7 @@ function App() {
     <Intro/>
     <Skills/>
     <Works/>
+    <Skill2/>
     <Contact />
     <Footer />
     
