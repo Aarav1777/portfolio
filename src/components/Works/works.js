@@ -80,7 +80,7 @@ const Works = () => {
         <CCard className='card'>
           <CCardImage orientation="top" src={image5} className='workImg' />
           <CCardBody className='card-body'>
-            <CCardTitle>Bank syatem</CCardTitle>
+            <CCardTitle>Bank system</CCardTitle>
             <CCardText>
               Tech Stack : Java spring boot <br /> & sql
             </CCardText>
