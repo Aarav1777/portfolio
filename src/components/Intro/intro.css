@@ -6,16 +6,34 @@
     overflow: hidden;
     position: relative;
   }
-  
+/* Image Styling */
+.bg{
+  display: block;
+  max-width: 400px;  /* Matches what you want */
+  width: 100%;
+  height: auto;       /* Maintain aspect ratio */
+  margin-left: auto;  /* Align right side by pushing left margin to auto */
+  margin-right: 0;
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+}
+
+/* Hover effect */
+.bg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
   .bg {
-    position: absolute;
-    top: -2rem;
-    right: 0;
-    z-index: -1;
-    object-fit: cover;
-    height: 100vh;
+    max-width: 100%;
+    margin: 1rem auto; /* Center it for smaller screens */
   }
-  
+}
+
+
   .introContent { /* Fixed typo from .itroContent to .introContent */
     height: 100vh;
     width: 100vw;

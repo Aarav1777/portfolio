@@ -6,6 +6,10 @@ import image4 from '../../assests/weather-app.jpg';
 import image1 from '../../assests/maxresdefault.jpg'
 import image3 from'../../assests/text-utils.png';
 import image2 from'../../assests/amazon-clone2.webp';
+import image6 from'../../assests/collab.png';
+import image7 from'../../assests/hotel-booking.png';
+
+
 
 
 // import { CCard } from '@coreui/react'
@@ -39,6 +43,38 @@ const Works = () => {
               Code
             </CButton>
             <CButton href="#" className='card-btn'>
+              Link
+            </CButton>
+          </CCardBody>
+        </CCard>
+
+ <CCard className='card'>
+          <CCardImage orientation="top" src={image6} className='workImg' />
+          <CCardBody className='card-body'>
+            <CCardTitle>Collab Nest</CCardTitle>
+            <CCardText>
+              Tech Stack : MERN Stack
+            </CCardText>
+            <CButton href="https://github.com/Aarav1777/CollabNest-AA" target='_blank' className='card-btn'>
+              Code
+            </CButton>
+            <CButton href="https://collab-nest-dev.vercel.app/" className='card-btn'>
+              Link
+            </CButton>
+          </CCardBody>
+        </CCard>
+ <CCard className='card'>
+          <CCardImage orientation="top" src={image7} className='workImg' />
+          <CCardBody className='card-body'>
+            <CCardTitle>Hotel-Booking</CCardTitle>
+            <CCardText>
+              Tech Stack : FullStack  website
+            </CCardText>
+            <CButton href="https://github.com/Aarav1777/Hotel-Booking" target='_blank' className='card-btn'>
+              Code
+            </CButton>
+            <CButton href="https://hotel-booking-backend-lrbld1215-aarav-s-projects-71e12306.vercel.app
+" className='card-btn'>
               Link
             </CButton>
           </CCardBody>

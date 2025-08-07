@@ -1,16 +1,10 @@
-import React, { useState } from 'react';  // Step 1: Import useState
+import React from 'react';
 import './intro.css';
-import bg from '../../assests/image.png';
+import bg from '../../assests/myImageAA.png';
+// import bg from '../../assests/myImageAA.png';
+
 
 function Intro() {
-  // Step 2: State to toggle the visibility of the CV
-  const [showCV, setShowCV] = useState(false);
-
-  // Step 3: Function to toggle the visibility of the resume
-  const toggleCV = () => {
-    setShowCV(!showCV);  // Toggle between true and false
-  };
-
   return (
     <section id="intro">
       <div className="introContent">
@@ -26,32 +20,23 @@ function Intro() {
 
         {/* Buttons container for horizontal alignment */}
         <div className="buttons-container">
-          {/* Show CV Button */}
-          <button className="btn" onClick={toggleCV}>
-            {showCV ? "Hide CV" : "Show CV"} {/* Button text changes based on state */}
-          </button>
-
-          {/* Download Resume Button */}
-         
-          <a href="/resume.pdf" download="Aarav_Resume.pdf">
+          {/* Download CV Button */}
+          {/* <a href="/Aarav A2 Ressume.pdf" download="Aa.pdf">
+           */}
+           <a href="/Aarav A2 Ressume.pdf" download="Aarav_A2_Resume.pdf">
             <button className="btn">
-              Download Resume
+              Download CV
             </button>
           </a>
         </div>
-
-        {/* Step 5: Conditionally render the resume PDF inside iframe */}
-        {showCV && (
-          <iframe
-            src="/resume.pdf"  // Path to your resume in the public folder
-            width="100%"
-            height="600px"  // Adjust the height as needed
-            title="Resume"
-            className="resume-iframe"
-          ></iframe>
-        )}
       </div>
-      <img src={bg} alt="profile" className="bg" />
+      {/* <img src={bg} alt="profile" className="bg" />
+       */}
+       <img src={bg} alt="profile-pic" className="bg" />
+
+      
+       {/* <div class="bg" style="background-image: url('your-image.png');"></div> */}
+
     </section>
   );
 }

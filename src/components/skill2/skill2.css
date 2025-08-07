@@ -1,68 +1,95 @@
-.skills {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 8%;
-    background: #141111;
-    color:white;
-    border-radius: 0.5rem;
+.skills-section {
+  padding: 2rem 8%;
+  background: #141111;
+  color: white;
+  border-radius: 0.5rem;
 }
 
-.skills-left {
-    flex: 1;
+.skills-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-.highlight-text {
-    font-size: 2rem;
-    color: #0056b3;
-    margin-bottom: 1rem;
+.skills-subtitle {
+  font-size: 1.3rem;
+  color: #0056b3;
+  margin-bottom: 1rem;
 }
 
-.skillsDesc {
-    color: #ffffff;
-    margin-bottom: 2rem;
-    /* font-family:'Courier New', Courier, monospace; */
+.skills-description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.skill-circle {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: #ddd;
-    position: relative;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    color: #142358;
+/* Default circular skills */
+.skill-item {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.progress {
-    width: 90%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: conic-gradient(#0056b3 var(--percentage), #ddd 0);
+.skill-progress {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: conic-gradient(#0056b3 0%, #ddd 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.skills-right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
-.profile-img {
-    width: 300px;
-    border-radius: 50%;
-    object-fit: cover;
+.skill-level {
+  font-size: 0.8rem;
+  color: #cccccc;
+}
+
+/* Java skill bar style */
+.skill-bar-container {
+  flex: 1 1 100%;
+  margin-bottom: 1rem;
+}
+
+.skill-bar-label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: inline-block;
+  color: #f89820;
+}
+
+.skill-bar {
+  height: 12px;
+  background: #333;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: #f89820;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+.skill-bar-percentage {
+  font-size: 0.8rem;
+  color: #f89820;
+  margin-left: 0.5rem;
 }
