@@ -1,122 +1,100 @@
 #intro {
-    height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 75rem;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-  }
-/* Image Styling */
-.bg{
-  display: block;
-  max-width: 400px;  /* Matches what you want */
-  width: 100%;
-  height: auto;       /* Maintain aspect ratio */
-  margin-left: auto;  /* Align right side by pushing left margin to auto */
-  margin-right: 0;
-  border-radius: 1rem; /* Rounded corners */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Hover effect */
-.bg:hover {
+.intro-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.intro-left {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 2rem;
+}
+
+.intro-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 200px;
+}
+
+/* ✅ Profile Picture Style */
+.intro-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* Circular */
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* Optional: Responsive adjustments */
-@media (max-width: 768px) {
-  .bg {
-    max-width: 100%;
-    margin: 1rem auto; /* Center it for smaller screens */
-  }
+/* ✅ Your original styles for text */
+.hello {
+  font-size: 1.75rem;
+  font-weight: 100;
 }
 
+.introText {
+  font-size: 3rem;
+  font-weight: 700;
+}
 
-  .introContent { /* Fixed typo from .itroContent to .introContent */
-    height: 100vh;
-    width: 100vw;
-    padding: 2rem;
-    font-size: 3rem;
-    font-weight: 700;
-    display: flex;
+.intoname {
+  color: rgb(95, 59, 167);
+}
+
+.intropara {
+  font-size: medium;
+  font-weight: 200;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.btn {
+  background: white;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  width: 8rem;
+  height: 3.5rem;
+  font-family: monospace;
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* 🔧 Responsive */
+@media screen and (max-width: 840px) {
+  #intro {
     flex-direction: column;
-    justify-content: center;
-  }
-  
-  .hello {
-    font-size: 1.75rem;
-    font-weight: 100;
-  }
-  
-  .intoname {
-    color: rgb(95, 59, 167);
-  }
-  
-  .intropara {
-    font-size: medium;
-    font-weight: 200;
-  }
-  .buttons-container{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    /* justify-content: center; */
-    gap: 10px;
-  }
-  
-  .btn {
-    
-    background: white;
-    margin: 1rem 0;
-    padding: 0.75rem 1.5rem;
-    /* padding: 10px; */
-    border: none;
-    border-radius: 2rem;
-    /* width: auto; Ensures the button takes up only as much space as needed */
-    max-width: 250px; /* Set a maximum width to control the size */
-    text-align: center; /* Ensures the text inside the button is centered */
-    display: inline-block; /* Makes the button only as wide as necessary */
-    /* height: 50px; */
-    width: 8rem;
-    height: 3.5rem;
-    font-family: monospace;
-    letter-spacing: 2px;
-    font-weight: 700;
-    /* font-size: large; */
-    /* gap: 10px;  */
-    cursor: pointer;
+    align-items: center;
+    text-align: center;
   }
 
-
-
-  /* Styling for the iframe that displays the resume */
-  .resume-iframe {
-    width: 50%;  /* Make sure the iframe takes up full width */
-    height: 1200vh;  /* Full viewport height */
-    border: none;
-    object-fit: contain;  /* Scale the content inside the iframe without cutting it off */
-    overflow: hidden;  /* Hide any overflow */
+  .intro-img {
+    margin-top: 2rem;
+    width: 180px;
+    height: 180px;
   }
-
-  
-  /* Fixed media query syntax */
-  @media screen and (max-width: 840px) { /* Added missing space */
-    .bg {
-      right: -10vw;
-    }
-    .introContent {
-      font-size: 10vw;
-    }
-    .hello {
-      font-size: 4.5vw;
-    }
-  }
-  
-  @media screen and (max-width: 480px) { /* Added missing space */
-    .bg {
-      right: -20vw;
-    }
-  }
-  
+}
